@@ -2,7 +2,7 @@ import {Button} from './ui/button';
 import {ImageWithFallback} from './figma/ImageWithFallback';
 import {ArrowRight, Sparkles, MessageCircle, Volume2} from 'lucide-react';
 // @ts-ignore
-import Image from '../assets/images/ai_chat.jpg';
+import Image from '../assets/images/ai_chat.png';
 
 export default function HeroSection() {
     return (
@@ -40,11 +40,13 @@ export default function HeroSection() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                            <Button size="lg"
-                                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-4">
-                                Start Free Trial
-                                <ArrowRight className="w-5 h-5 ml-2"/>
-                            </Button>
+                            <a href="http://app.soulify.chat">
+                                <Button size="lg"
+                                        className="cursor-pointer bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-4">
+                                    Start Free Trial
+                                    <ArrowRight className="w-5 h-5 ml-2"/>
+                                </Button>
+                            </a>
                             <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-2">
                                 Watch Demo
                             </Button>
@@ -86,8 +88,8 @@ export default function HeroSection() {
                                         <MessageCircle className="w-5 h-5 text-green-600"/>
                                     </div>
                                     <div>
-                                        <div className="font-semibold text-sm">Live Chat</div>
-                                        <div className="text-xs text-gray-500">Active Now</div>
+                                        <div className="font-semibold text-sm">Copy a person</div>
+                                        <div className="text-xs text-gray-500">Based on imported chat</div>
                                     </div>
                                 </div>
                             </div>

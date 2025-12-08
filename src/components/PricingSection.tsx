@@ -4,34 +4,51 @@ import { Badge } from './ui/badge';
 
 export default function PricingSection() {
   const plans = [
-    {
-      name: "Basic",
-      price: "$10",
-      period: "/month",
-      description: "Create and interact with a character based on WhatsApp or Telegram chats",
-      features: [
-        "1 Character creation from chat",
-        "1,000 messages/month",
-        "Text chat interaction"
-      ],
-      popular: true,
-      color: "from-gray-500 to-gray-600"
-    },
-    {
-      name: "Pro",
-      price: "$20",
-      period: "/month",
-      description: "Advanced interaction with voice cloning and more messages",
-      features: [
-        "3 Character creation from chat",
-        "3,000 messages/month",
-        "Voice cloning",
-        "Voice message interaction"
-      ],
-      popular: false,
-      color: "from-blue-500 to-purple-500"
-    }
-  ];
+        {
+          name: "Basic",
+          price: "$10",
+          period: "/month",
+          description: "Text-only interaction with your AI character.",
+          features: [
+            "1 Character created from WhatsApp or Telegram chat",
+            "1,000 messages/month",
+            "Text chat with AI character",
+            "Core features, no voice"
+          ],
+          popular: false,
+          color: "from-gray-500 to-gray-600"
+        },
+        {
+          name: "Pro",
+          price: "$20",
+          period: "/month",
+          description: "Text + voice interaction with exact voice cloning.",
+          features: [
+            "2 Character created from chat",
+            "2,000 messages/month",
+            "Voice messages + exact voice clone",
+            "Text and voice chat"
+          ],
+          popular: true,
+          color: "from-blue-500 to-purple-500"
+        },
+        {
+          name: "Premium",
+          price: "$35",
+          period: "/month",
+          description: "Advanced plan with multiple characters and premium features.",
+          features: [
+            "3 Characters",
+            "5,000 messages/month",
+            "Voice messages",
+            "Priority support",
+            "Chat history saving + personalization"
+          ],
+          popular: false,
+          color: "from-green-500 to-teal-500"
+        }
+      ]
+  ;
 
   return (
     <section id="pricing" className="py-20 bg-white">
@@ -85,13 +102,15 @@ export default function PricingSection() {
                   ))}
                 </div>
 
-                <button className={`cursor-pointer w-full py-3 px-4 rounded-lg font-medium transition-all duration-300 ${
-                  plan.popular 
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:shadow-lg' 
-                    : `bg-gradient-to-r ${plan.color} text-white hover:shadow-lg`
-                }`}>
-                  Get Started
-                </button>
+                <a href="http://app.soulify.chat/subscription">
+                  <button className={`cursor-pointer w-full py-3 px-4 rounded-lg font-medium transition-all duration-300 ${
+                      plan.popular
+                          ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:shadow-lg'
+                          : `bg-gradient-to-r ${plan.color} text-white hover:shadow-lg`
+                  }`}>
+                    Get Started
+                  </button>
+                </a>
               </CardContent>
             </Card>
           ))}
