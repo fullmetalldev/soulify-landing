@@ -49,6 +49,12 @@
         '@': path.resolve(__dirname, './src'),
       },
     },
+    optimizeDeps: {
+      include: ["react-awesome-real"]
+    },
+    ssr: {
+      noExternal: ["react-awesome-reveal"],
+    },
     build: {
       target: 'esnext',
       outDir: 'build',
