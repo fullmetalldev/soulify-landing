@@ -3,7 +3,7 @@ import {ImageWithFallback} from './figma/ImageWithFallback';
 import {ArrowRight, Sparkles, MessageCircle, Volume2} from 'lucide-react';
 // @ts-ignore
 import Image from '../assets/images/ai_chat.png';
-import {Fade, Slide} from "react-awesome-reveal";
+import {Fade} from "react-awesome-reveal";
 
 export default function HeroSection() {
     return (
