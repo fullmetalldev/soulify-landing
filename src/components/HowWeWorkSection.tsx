@@ -1,4 +1,5 @@
 import {MessageSquare, Settings, Rocket, HeadphonesIcon} from 'lucide-react';
+import {Slide} from 'react-awesome-reveal'
 
 export default function HowWeWorkSection() {
     const steps = [
@@ -43,41 +44,43 @@ export default function HowWeWorkSection() {
                 </div>
 
                 {/* Process Steps */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {steps.map((step, index) => (
-                        <div key={index} className="relative">
-                            {/* Connector Line (hidden on mobile) */}
-                            {index < steps.length - 1 && (
+                <div className="overflow-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <Slide direction='up' cascade>
+                        {steps.map((step, index) => (
+                            <div key={index} className="relative">
+                                {/* Connector Line (hidden on mobile) */}
+                                {index < steps.length - 1 && (
+                                    <div
+                                        className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-blue-300 to-purple-300 z-0"></div>
+                                )}
+
+                                {/* Step Card */}
                                 <div
-                                    className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-blue-300 to-purple-300 z-0"></div>
-                            )}
+                                    className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group z-10">
+                                    {/* Icon */}
+                                    <div
+                                        className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+                                        {step.icon}
+                                    </div>
 
-                            {/* Step Card */}
-                            <div
-                                className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group z-10">
-                                {/* Icon */}
-                                <div
-                                    className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
-                                    {step.icon}
-                                </div>
+                                    {/* Content */}
+                                    <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
+                                    <p className="text-gray-600 mb-6 leading-relaxed">{step.description}</p>
 
-                                {/* Content */}
-                                <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
-                                <p className="text-gray-600 mb-6 leading-relaxed">{step.description}</p>
-
-                                {/* Details List */}
-                                <div className="space-y-2">
-                                    {step.details.map((detail, detailIndex) => (
-                                        <div key={detailIndex} className="flex items-center text-sm text-gray-700">
-                                            <div
-                                                className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mr-3"></div>
-                                            {detail}
-                                        </div>
-                                    ))}
+                                    {/* Details List */}
+                                    <div className="space-y-2">
+                                        {step.details.map((detail, detailIndex) => (
+                                            <div key={detailIndex} className="flex items-center text-sm text-gray-700">
+                                                <div
+                                                    className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mr-3"></div>
+                                                {detail}
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </Slide>
                 </div>
 
                 {/* Bottom CTA */}

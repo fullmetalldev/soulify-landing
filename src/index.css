@@ -1104,6 +1104,7 @@
     }
 
     .overflow-hidden {
+        padding: 15px;
         overflow: hidden;
     }
 

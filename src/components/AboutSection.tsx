@@ -1,5 +1,6 @@
 import {ImageWithFallback} from './figma/ImageWithFallback';
-import {Target, Users, Award, TrendingUp, Shield} from 'lucide-react';
+import {Users, Award, TrendingUp, Shield} from 'lucide-react';
+import {Slide, Fade} from 'react-awesome-reveal'
 
 export default function AboutSection() {
     const stats = [
@@ -37,18 +38,22 @@ export default function AboutSection() {
                         </div>
 
                         {/* Stats Grid */}
-                        <div className="grid grid-cols-2 gap-6">
-                            {stats.map((stat, index) => (
-                                <div key={index} className="bg-gray-50 rounded-xl p-6 text-center">
-                                    <div
-                                        className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-3">
-                                        {stat.icon}
+
+                        <div className="overflow-hidden grid grid-cols-2 gap-6">
+                            <Slide direction="up" cascade>
+                                {stats.map((stat, index) => (
+                                    <div key={index} className="bg-gray-50 rounded-xl p-6 text-center">
+                                        <div
+                                            className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-3">
+                                            {stat.icon}
+                                        </div>
+                                        <div className="text-2xl font-bold text-gray-900 mb-1">{stat.value}</div>
+                                        <div className="text-sm text-gray-600">{stat.label}</div>
                                     </div>
-                                    <div className="text-2xl font-bold text-gray-900 mb-1">{stat.value}</div>
-                                    <div className="text-sm text-gray-600">{stat.label}</div>
-                                </div>
-                            ))}
+                                ))}
+                            </Slide>
                         </div>
+
                     </div>
 
                     {/* Right content - Image */}
