@@ -1,5 +1,5 @@
 import {MessageSquare, Settings, Rocket, HeadphonesIcon} from 'lucide-react';
-import {Slide} from 'react-awesome-reveal'
+import {Slide, Fade} from 'react-awesome-reveal'
 
 export default function HowWeWorkSection() {
     const steps = [
@@ -45,7 +45,7 @@ export default function HowWeWorkSection() {
 
                 {/* Process Steps */}
                 <div className="overflow-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <Slide direction='up' cascade>
+                    <Fade triggerOnce cascade>
                         {steps.map((step, index) => (
                             <div key={index} className="relative">
                                 {/* Connector Line (hidden on mobile) */}
@@ -80,7 +80,7 @@ export default function HowWeWorkSection() {
                                 </div>
                             </div>
                         ))}
-                    </Slide>
+                    </Fade>
                 </div>
 
                 {/* Bottom CTA */}

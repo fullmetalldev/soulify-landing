@@ -499,6 +499,10 @@
         position: fixed;
     }
 
+    .header {
+        max-width: 100vw;
+    }
+
     .relative {
         position: relative;
     }

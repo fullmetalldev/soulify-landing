@@ -40,7 +40,7 @@ export default function AboutSection() {
                         {/* Stats Grid */}
 
                         <div className="overflow-hidden grid grid-cols-2 gap-6">
-                            <Slide direction="up" cascade>
+                            <Slide damping={0.2} triggerOnce direction='up' cascade>
                                 {stats.map((stat, index) => (
                                     <div key={index} className="bg-gray-50 rounded-xl p-6 text-center">
                                         <div
