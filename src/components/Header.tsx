@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import {APP_URL} from '../config';
 import {Button} from './ui/button';
 import {Menu, X} from 'lucide-react';
 
@@ -41,7 +42,7 @@ export default function Header() {
 
                     {/* CTA Button */}
                     <div className="hidden md:flex">
-                        <a href="http://app.soulify.chat">
+                        <a href={APP_URL}>
                             <Button
                                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
                                 Get Started
@@ -75,7 +76,7 @@ export default function Header() {
                                 </a>
                             ))}
                             <div className="px-3 py-2">
-                                <a href="http://app.soulify.chat">
+                                <a href={APP_URL}>
                                     <Button
                                         className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
                                         Get Started
