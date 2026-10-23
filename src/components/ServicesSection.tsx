@@ -1,4 +1,5 @@
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from './ui/card';
+import {APP_URL} from '../config';
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from './ui/carousel';
 import {
     User,
@@ -150,7 +151,7 @@ export default function ServicesSection() {
                             and start interacting with your recreated characters today.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="http://app.soulify.chat">
+                            <a href={APP_URL}>
                                 <button
                                     className="z100 cursor-pointer px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:shadow-lg transition-all duration-300">
                                     Start Free Trial

@@ -1,4 +1,5 @@
 import {Check, Star} from 'lucide-react';
+import {APP_URL} from '../config';
 import {Card, CardContent, CardHeader, CardTitle} from './ui/card';
 import {Badge} from './ui/badge';
 import {Slide, Fade} from 'react-awesome-reveal'
@@ -108,7 +109,7 @@ export default function PricingSection() {
                                         ))}
                                     </div>
 
-                                    <a href="http://app.soulify.chat/subscription">
+                                    <a href={`${APP_URL}/settings`}>
                                         <button
                                             className={`cursor-pointer w-full py-3 px-4 rounded-lg font-medium transition-all duration-300 ${
                                                 plan.popular

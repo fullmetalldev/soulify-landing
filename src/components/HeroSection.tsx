@@ -1,4 +1,5 @@
 import {Button} from './ui/button';
+import {APP_URL} from '../config';
 import {ImageWithFallback} from './figma/ImageWithFallback';
 import {ArrowRight, Sparkles, MessageCircle, Volume2} from 'lucide-react';
 // @ts-ignore
@@ -45,7 +46,7 @@ export default function HeroSection() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                            <a href="http://app.soulify.chat">
+                            <a href={APP_URL}>
                                 <Button style={{width: '100%'}} size="lg"
                                         className="cursor-pointer bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-4">
                                     Start Free Trial

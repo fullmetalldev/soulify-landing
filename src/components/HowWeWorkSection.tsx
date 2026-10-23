@@ -1,4 +1,5 @@
 import {MessageSquare, Settings, Rocket, HeadphonesIcon} from 'lucide-react';
+import {APP_URL} from '../config';
 import {Slide, Fade} from 'react-awesome-reveal'
 
 export default function HowWeWorkSection() {
@@ -94,7 +95,7 @@ export default function HowWeWorkSection() {
                             today.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="http://app.soulify.chat">
+                            <a href={APP_URL}>
                                 <button
                                     className="cursor-pointer px-8 py-3 bg-white text-blue-600 font-medium rounded-lg hover:bg-gray-100 transition-all duration-300">
                                     Start Free Trial
