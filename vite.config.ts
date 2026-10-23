@@ -60,7 +60,8 @@
       outDir: 'build',
     },
     server: {
-      port: 3000,
-      open: true,
+      // 3000 is the web app's dev port; the landing runs next to it
+      port: 3002,
+      open: false,
     },
   });

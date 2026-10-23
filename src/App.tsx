@@ -1,25 +1,29 @@
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
-import ServicesSection from './components/ServicesSection';
-import AboutSection from './components/AboutSection';
-import HowWeWorkSection from './components/HowWeWorkSection';
+import HowItWorksSection from './components/HowItWorksSection';
+import FeaturesSection from './components/FeaturesSection';
+import StorySection from './components/StorySection';
 import PricingSection from './components/PricingSection';
-import ContactSection from './components/ContactSection';
+import TrustSection from './components/TrustSection';
+import FaqSection from './components/FaqSection';
+import CtaSection from './components/CtaSection';
 import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       <Header />
       <main>
         <HeroSection />
-        <ServicesSection />
-        <AboutSection />
-        <HowWeWorkSection />
+        <HowItWorksSection />
+        <FeaturesSection />
+        <StorySection />
         <PricingSection />
-        <ContactSection />
+        <TrustSection />
+        <FaqSection />
+        <CtaSection />
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
