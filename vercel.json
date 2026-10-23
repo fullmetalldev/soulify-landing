@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/auth",
+      "destination": "https://app.soulify.chat/auth/action",
+      "permanent": false
+    }
+  ]
+}
