@@ -28,7 +28,7 @@ const faqs = [
     },
     {
         q: 'How do I cancel Plus?',
-        a: `Plus is a monthly subscription with no minimum term. To cancel, email us at ${CONTACT_EMAIL} and it won't renew.`,
+        a: 'Plus is a monthly subscription with no minimum term. Cancel anytime in Settings → Manage subscription; you keep Plus until the end of the month you paid for.',
     },
 ];
 
