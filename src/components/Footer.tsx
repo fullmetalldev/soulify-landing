@@ -16,6 +16,7 @@ const columns = [
         links: [
             {name: 'Responsible AI', href: '#trust'},
             {name: 'Terms of Service', href: `${APP_URL}/terms`},
+            {name: 'Privacy Policy', href: `${APP_URL}/privacy`},
             {name: 'Contact', href: `mailto:${CONTACT_EMAIL}`},
         ],
     },
@@ -47,6 +48,10 @@ export default function Footer() {
 
                 <div className="footer__bottom">
                     <span>© {new Date().getFullYear()} Soulify. All rights reserved.</span>
+                    <button type="button" className="footer__cookies"
+                            onClick={() => (window as any).soulifyCookieSettings?.()}>
+                        Cookie settings
+                    </button>
                     <span>Soulify creates AI simulations, not real people.</span>
                 </div>
             </div>

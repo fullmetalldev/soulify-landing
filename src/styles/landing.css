@@ -969,6 +969,19 @@ button {
     color: var(--text-faint);
 }
 
+.footer__cookies {
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--text-faint);
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.footer__cookies:hover {
+    color: var(--blue);
+}
+
 /* --- Animations --- */
 @keyframes bubbleIn {
     from {
