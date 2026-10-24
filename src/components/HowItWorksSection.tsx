@@ -5,7 +5,7 @@ const steps = [
     {
         icon: <FileArchive size={20}/>,
         title: 'Export a chat',
-        text: 'Export a conversation from WhatsApp on iPhone or Android, or from Telegram Desktop (.json).',
+        text: 'Export a conversation from WhatsApp on iPhone or Android, or from Telegram on your computer (.json or .html).',
     },
     {
         icon: <UserRound size={20}/>,

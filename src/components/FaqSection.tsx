@@ -4,7 +4,7 @@ import {CONTACT_EMAIL} from '../config';
 const faqs = [
     {
         q: 'Which chats can I import?',
-        a: 'WhatsApp chats exported from an iPhone or an Android phone (Export chat → Without media, which gives a .zip or .txt file) and Telegram chats exported from Telegram Desktop as "Machine-readable JSON".',
+        a: 'WhatsApp chats exported from an iPhone or an Android phone (Export chat → Without media, which gives a .zip or .txt file) and Telegram chats exported from Telegram Desktop or Telegram for macOS (JSON or HTML, without media).',
     },
     {
         q: 'Am I talking to the real person?',
